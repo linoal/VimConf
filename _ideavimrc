@@ -1,0 +1,33 @@
+source ~/.vimrc
+set surround
+
+" EasyMotion
+set easymotion
+"omap z <Plug>(easymotion-s2)
+"nmap f <Plug>(easymotion-fl)
+"nmap t <Plug>(easymotion-tl)
+"nmap F <Plug>(easymotion-Fl)
+"nmap T <Plug>(easymotion-Tl)
+
+" 参考  https://ikenox.info/blog/ideavim-introduction/
+nnoremap ,e :action SearchEverywhere<CR>
+nnoremap ,g :action FindInPath<CR>
+nnoremap ,s :action FileStructurePopup<CR>
+
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gb :action JumpToLastChange<CR>
+
+nnoremap U :action FindUsages<CR>
+nnoremap R :action RenameElement<CR>
+nnoremap == :action ReformatCode<CR>
+vnoremap == :action ReformatCode<CR>
+nnoremap cc :action CommentByLineComment<CR>
+vnoremap cc :action CommentByLineComment<CR>
+
+" <C-CR>が入力できない
+" nnoremap <C-CR> :action ShowIntensionActions<CR>
+
+nnoremap ,a :GotoAction<CR>
+vnoremap ,a :GotoAction<CR>

@@ -1,0 +1,29 @@
+[[plugins]]
+repo = 'https://github.com/tpope/vim-surround'
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+
+# LSP (language server protocol)
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+source = 'release'
+build = 'coc#util#install()'
+
+# 以下のColorSchemeのうちどれか1つを hook_add で適用
+# 参考: https://qiita.com/kawaz/items/ee725f6214f91337b42b
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+[[plugins]]
+repo = "arcticicestudio/nord-vim"
+
+[[plugins]]
+repo = "nanotech/jellybeans.vim"
+
+[[plugins]]
+repo = 'jonathanfilip/vim-lucius' 
+
+hook_add = '''
+au MyAutoCmd VimEnter * nested colorscheme lucius
+au MyAutoCmd VimEnter * nested LuciusBlack 
+'''
